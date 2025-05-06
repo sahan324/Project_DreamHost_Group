@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact Us</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="Contact_Us.css">
+</head>
+<body class="bg-blur">
+    <header>
+        <div class="logo"><span>𝘿</span>𝙧𝙚𝙖𝙢𝙃𝙤𝙨𝙩</div>
+        <nav>
+          <a href="Index.html">Home</a>
+    
+          <!-- Government Sector with Dropdown -->
+          <div class="dropdown">
+            <a href="#">Government Sector</a>
+            <div class="dropdown-content">
+              <a href="education.html">Education</a>
+              <a href="Healthcare.html">Healthcare</a>
+              <a href="Transportation.html">Transportation</a>
+            </div>
+          </div>
+    
+          <a href="solution.html">Solutions</a>
+          <a href="project.html">Projects</a>
+          <a href="Contact_Us.html">Contact Us</a>
+        </nav>
+      </header>
+
+  <!-- Overlay -->
+  <div class="absolute inset-0 bg-black bg-opacity-60 backdrop-blur-md z-0"></div>
+
+  <!-- Contact Form Section -->
+  <div class="relative z-10 flex justify-center items-center min-h-screen px-4">
+    <div class="bg-white bg-opacity-90 p-8 rounded-2xl shadow-2xl max-w-xl w-full">
+      <h2 class="text-3xl font-bold text-center mb-4">Contact Us</h2>
+      <p class="text-center text-gray-600 mb-6">We'd love to hear from you. Fill out the form below to get in touch!</p>
+
+      <!-- Confirmation Message -->
+      <div id="confirmation" class="hidden mb-4 p-4 text-green-800 bg-green-100 rounded-md text-center">
+        ✅ Your message has been sent successfully!
+      </div>
+
+      <form id="contactForm" class="space-y-4">
+        <div>
+          <label for="name" class="block text-sm font-medium mb-1">Full Name</label>
+          <input type="text" id="name" class="input-field" required />
+        </div>
+        <div>
+          <label for="email" class="block text-sm font-medium mb-1">Email</label>
+          <input type="email" id="email" class="input-field" required />
+        </div>
+        <div>
+          <label for="subject" class="block text-sm font-medium mb-1">Subject</label>
+          <input type="text" id="subject" class="input-field" required />
+        </div>
+        <div>
+          <label for="message" class="block text-sm font-medium mb-1">Message</label>
+          <textarea id="message" rows="5" class="input-field" required></textarea>
+        </div>
+        <div class="text-center">
+          <button type="submit" class="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition">
+            Send Message
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <div class="footer">
+    <div class="footer-overlay"></div> <!-- Overlay layer -->
+  
+    <div class="columns">
+      <!-- Company -->
+      <div class="column">
+        <h3>DreamHost Group</h3><br>
+        <p>Delivering innovative IT solutions locally and globally. We specialize in software, web development, and digital services that drive business transformation and lasting impact.</p>
+      </div>
+  
+      <!-- Services -->
+      <div class="column">
+        <h3>Our Services</h3><br>
+        <ul>
+          <li>Custom software development</li>
+          <li>Web and mobile app solutions</li>
+          <li>Enterprise resource planning (ERP) systems</li>
+          <li>Customer relationship management (CRM) tools</li>
+          <li>E-commerce solutions</li>
+          <li>SaaS (Software as a Service) products</li>
+          <li>IT infrastructure solutions</li>
+        </ul>
+      </div>
+  
+      <!-- Help -->
+      <div class="column">
+        <h3>Help & Support</h3><br>
+        <ul>
+          <li>Contact Us</li>
+          <li>View More</li>
+          <li>Solutions</li>
+        </ul>
+      </div>
+  
+      <!-- Contact Info -->
+      <div class="column contact-info">
+        <h3>CONTACT</h3><br>
+        <div class="info-item">
+          <i class="fas fa-home"></i>
+          <span>Colombo 07 , Sri Lanka</span>
+        </div>
+        <div class="info-item">
+          <i class="fas fa-envelope"></i>
+          <span>DreamHost@gmail.lk</span>
+        </div>
+        <div class="info-item">
+          <i class="fas fa-phone"></i>
+          <span>0114 809 809</span>
+        </div>
+        <div class="info-item">
+          <i class="fas fa-print"></i>
+          <span>0115 809 809</span>
+        </div>
+      </div>
+    </div>
+  
+    <!-- Copyright -->
+    <div class="copyright">
+      © 2025 Copyright: DreamHost Group
+    </div>
+  </div>
+  
+
+  <script src="Contact_Us.js"></script>
+</body>
+</html>

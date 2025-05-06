@@ -1,0 +1,364 @@
+/* Reset some default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #2f2f2f;
+    color: #db6060;
+  }
+
+   /* Navigation styles */
+   header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    background-color: #000;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+  }
+
+  header .logo {
+    font-size: 1.5em;
+    font-weight: bold;
+  }
+
+  nav {
+    display: flex;
+    gap: 20px;
+  }
+
+  nav a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 8px 12px;
+    transition: background-color 0.3s;
+  }
+
+  nav a:hover {
+    background-color: #444;
+    border-radius: 4px;
+  }
+
+   /* Dropdown Styles */
+   .dropdown {
+    position: relative;
+    display: flex;
+    align-items: center;
+  }
+
+  .dropdown > a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 8px 12px;
+    transition: background-color 0.3s;
+  }
+
+  .dropdown > a:hover {
+    background-color: #444;
+    border-radius: 4px;
+  }
+
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #000;
+    top: 100%;
+    left: 0;
+    min-width: 180px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.4);
+    border-radius: 4px;
+    flex-direction: column;
+    z-index: 1000;
+  }
+
+  .dropdown-content a {
+    padding: 10px 12px;
+    color: #fff;
+    text-decoration: none;
+    display: block;
+    font-weight: normal;
+  }
+
+  .dropdown-content a:hover {
+    background-color: #444;
+  }
+
+  .dropdown:hover .dropdown-content {
+    display: flex;
+  }
+
+
+  /* Hero section styles */
+  .hero {
+  position: relative;
+  width: 100%;
+  height: 100vh; /* Full viewport height */
+  background-image: url('project/project\ image.jpg');
+  background-size: cover; /* Ensures full coverage */
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* No repeat */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+  /* Overlay for text */
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5); /* semi-transparent overlay for readability */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    text-align: center;
+    color: #fff;
+    opacity: 0;
+    animation: fadeIn 2s forwards;
+  }
+
+  @keyframes fadeIn {
+    to {
+      opacity: 1;
+    }
+  }
+
+  .overlay h1 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+  }
+
+  .schedule {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+  }
+
+  h1 {
+    color: #c2cbd4;
+    text-align: center;
+    margin: 20px 0 30px;
+    font-size: 2.2rem;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.card {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    position: relative;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 14px 28px rgba(0,0,0,0.15);
+}
+
+.card-image {
+    height: 180px;
+    overflow: hidden;
+}
+
+.card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.card:hover .card-image img {
+    transform: scale(1.05);
+}
+
+.card-content {
+    padding: 20px;
+}
+
+.card h2 {
+    color: #2c3e50;
+    margin-bottom: 10px;
+    font-size: 1.4rem;
+}
+
+.card h3 {
+    color: #7f8c8d;
+    margin-bottom: 8px;
+    font-size: 1.1rem;
+}
+
+.card p {
+    color: #34495e;
+    margin: 5px 0;
+    font-size: 0.95rem;
+}
+
+.highlight {
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+.divider {
+    border-top: 1px solid #ecf0f1;
+    margin: 15px 0;
+}
+
+/* Brand-specific colors */
+.singer .highlight { color: var(--singer-color); }
+.abans .highlight { color: var(--abans-color); }
+.gnext .highlight { color: var(--gnext-color); }
+.brand-choices .highlight { color: var(--brand-choices-color); }
+
+/* Mobile responsiveness */
+@media (max-width: 1200px) {
+    .grid-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .grid-container {
+        grid-template-columns: 1fr;
+    }
+    
+    h1 {
+        font-size: 1.8rem;
+    }
+}
+
+/* Touch devices will show animation on tap */
+@media (hover: none) {
+    .card:active {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+    }
+}
+
+.footer {
+    background-color: #343a40; /* dark background as in original */
+    color: #fff;
+    padding: 40px 20px;
+    font-size: 14px;
+  }
+  /* Social section */
+  .social {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  .social p {
+    margin: 0 0 10px;
+  }
+  .social a {
+    margin: 0 8px;
+    color: #fff;
+    font-size: 20px;
+    text-decoration: none;
+    transition: color 0.3s;
+  }
+  .social a:hover {
+    color: #007bff;
+  }
+  /* Columns layout */
+  .columns {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+  .column {
+    flex: 1 1 200px;
+    padding: 10px;
+    max-width: 240px;
+  }
+  .column h6 {
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  .column p, .column ul {
+    margin: 0;
+  }
+  .column ul {
+    list-style: none;
+  }
+  .column ul li {
+    margin-bottom: 8px;
+  }
+  /* Contact info icon list */
+  .contact-info .info-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 8px;
+  }
+  .contact-info i {
+    margin-right: 10px;
+    width: 20px;
+    text-align: center;
+  }
+  /* Bottom copyright */
+  .copyright {
+    text-align: center;
+    margin-top: 20px;
+    color: #ccc;
+  }
+
+  /* Responsive styles */
+  @media(max-width: 768px) {
+    header {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    nav {
+      flex-direction: column;
+      gap: 10px;
+      margin-top: 10px;
+    }
+
+    .overlay-content h1 {
+      font-size: 2em;
+    }
+  }
+
+  
+  /* Responsive adjustments */
+  @media(max-width: 768px) {
+    .columns {
+      flex-direction: column;
+      align-items: center;
+    }
+    .column {
+      max-width: 90%;
+    }
+  }
+
+ 
+
+ 
+
+  /* Responsive container for gallery */
+  @media (min-width: 768px) {
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+  }
